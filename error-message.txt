@@ -1,0 +1,103 @@
+$ heroku logs --tail
+
+
+2022-09-01T16:54:31.223655+00:00 app[web.1]: npm ERR!     /app/.npm/_logs/2022-09-01T16_54_31_179Z-debug-0.log
+2022-09-01T16:54:31.370113+00:00 heroku[web.1]: Process exited with status 1
+2022-09-01T16:54:31.766279+00:00 heroku[web.1]: State changed from starting to crashed
+2022-09-01T16:54:31.770072+00:00 heroku[web.1]: State changed from crashed to starting
+2022-09-01T16:54:34.420583+00:00 heroku[web.1]: Starting process with command `npm start`
+2022-09-01T16:54:36.410874+00:00 app[web.1]: npm ERR! Missing script: "start"
+2022-09-01T16:54:36.411245+00:00 app[web.1]: npm ERR!
+2022-09-01T16:54:36.411591+00:00 app[web.1]: npm ERR! Did you mean one of these?
+2022-09-01T16:54:36.411757+00:00 app[web.1]: npm ERR!     npm star # Mark your favorite packages
+2022-09-01T16:54:36.412006+00:00 app[web.1]: npm ERR!     npm stars # View packages marked as favorites
+2022-09-01T16:54:36.412146+00:00 app[web.1]: npm ERR!
+2022-09-01T16:54:36.412253+00:00 app[web.1]: npm ERR! To see a list of scripts, run:
+2022-09-01T16:54:36.412516+00:00 app[web.1]: npm ERR!   npm run
+2022-09-01T16:54:36.414951+00:00 app[web.1]:
+2022-09-01T16:54:36.415349+00:00 app[web.1]: npm ERR! A complete log of this run can be found in:
+2022-09-01T16:54:36.415500+00:00 app[web.1]: npm ERR!     /app/.npm/_logs/2022-09-01T16_54_36_341Z-debug-0.log
+2022-09-01T16:54:36.547138+00:00 heroku[web.1]: Process exited with status 1
+2022-09-01T16:54:36.635974+00:00 heroku[web.1]: State changed from starting to crashed
+2022-09-01T16:54:39.450872+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=gavvahars-rest-rant.herokuapp.com request_id=f901e4e4-6976-4752-afbf-ae3c658bbbf3 fwd="98.110.36.184" dyno= connect= service= status=503 bytes= protocol=https
+2022-09-01T16:54:39.906196+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/favicon.ico" host=gavvahars-rest-rant.herokuapp.com request_id=b279393b-bbb9-41fa-bb59-8f95d4be2921 fwd="98.110.36.184" dyno= connect= service= status=503 bytes= protocol=https
+2022-09-01T17:00:27.817792+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=gavvahars-rest-rant.herokuapp.com request_id=4e796d53-d428-4107-b5d3-54ee94599a3a fwd="98.110.36.184" dyno= connect= service= status=503 bytes= protocol=https
+2022-09-01T17:00:28.324692+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/favicon.ico" host=gavvahars-rest-rant.herokuapp.com request_id=3578928a-b274-42c9-a895-3b64b13439de fwd="98.110.36.184" dyno= connect= service= status=503 bytes= protocol=https
+2022-09-01T17:02:36.000000+00:00 app[api]: Build started by user nihargavva@hotmail.com
+2022-09-01T17:02:58.205725+00:00 app[api]: Deploy ce9c86b0 by user nihargavva@hotmail.com
+2022-09-01T17:02:58.205725+00:00 app[api]: Release v4 created by user nihargavva@hotmail.com
+2022-09-01T17:02:58.439842+00:00 heroku[web.1]: State changed from crashed to starting
+2022-09-01T17:02:59.000000+00:00 app[api]: Build succeeded
+2022-09-01T17:03:00.849241+00:00 heroku[web.1]: Starting process with command `npm start`
+2022-09-01T17:03:02.927125+00:00 app[web.1]: npm ERR! Missing script: "start"
+2022-09-01T17:03:02.927253+00:00 app[web.1]: npm ERR!
+2022-09-01T17:03:02.927379+00:00 app[web.1]: npm ERR! Did you mean one of these?
+2022-09-01T17:03:02.927425+00:00 app[web.1]: npm ERR!     npm star # Mark your favorite packages
+2022-09-01T17:03:02.927521+00:00 app[web.1]: npm ERR!     npm stars # View packages marked as favorites
+2022-09-01T17:03:02.927563+00:00 app[web.1]: npm ERR!
+2022-09-01T17:03:02.927605+00:00 app[web.1]: npm ERR! To see a list of scripts, run:
+2022-09-01T17:03:02.927694+00:00 app[web.1]: npm ERR!   npm run
+2022-09-01T17:03:02.929230+00:00 app[web.1]:
+2022-09-01T17:03:02.929380+00:00 app[web.1]: npm ERR! A complete log of this run can be found in:
+2022-09-01T17:03:02.929430+00:00 app[web.1]: npm ERR!     /app/.npm/_logs/2022-09-01T17_03_02_886Z-debug-0.log
+2022-09-01T17:03:03.044389+00:00 heroku[web.1]: Process exited with status 1
+2022-09-01T17:03:03.199703+00:00 heroku[web.1]: State changed from starting to crashed
+2022-09-01T17:03:03.770197+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=gavvahars-rest-rant.herokuapp.com request_id=ba28ab94-68af-4a7a-bc9c-bffe39b19c07 fwd="98.110.36.184" dyno= connect= service= status=503 bytes= protocol=https
+2022-09-01T17:03:04.178841+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/favicon.ico" host=gavvahars-rest-rant.herokuapp.com request_id=9cd7dc3e-75a9-4af5-aef2-1bd47c3d4e87 fwd="98.110.36.184" dyno= connect= service= status=503 bytes= protocol=https
+2022-09-01T17:04:38.000000+00:00 app[api]: Build started by user nihargavva@hotmail.com
+2022-09-01T17:04:58.367779+00:00 app[api]: Deploy 05264c98 by user nihargavva@hotmail.com
+2022-09-01T17:04:58.367779+00:00 app[api]: Release v5 created by user nihargavva@hotmail.com
+2022-09-01T17:04:58.618823+00:00 heroku[web.1]: State changed from crashed to starting
+2022-09-01T17:04:59.000000+00:00 app[api]: Build succeeded
+2022-09-01T17:05:00.927013+00:00 heroku[web.1]: Starting process with command `npm start`
+2022-09-01T17:05:03.230155+00:00 app[web.1]: npm ERR! Missing script: "start"
+2022-09-01T17:05:03.230427+00:00 app[web.1]: npm ERR!
+2022-09-01T17:05:03.230642+00:00 app[web.1]: npm ERR! Did you mean one of these?
+2022-09-01T17:05:03.230782+00:00 app[web.1]: npm ERR!     npm star # Mark your favorite packages
+2022-09-01T17:05:03.230959+00:00 app[web.1]: npm ERR!     npm stars # View packages marked as favorites
+2022-09-01T17:05:03.231042+00:00 app[web.1]: npm ERR!
+2022-09-01T17:05:03.231119+00:00 app[web.1]: npm ERR! To see a list of scripts, run:
+2022-09-01T17:05:03.231276+00:00 app[web.1]: npm ERR!   npm run
+2022-09-01T17:05:03.233599+00:00 app[web.1]:
+2022-09-01T17:05:03.233822+00:00 app[web.1]: npm ERR! A complete log of this run can be found in:
+2022-09-01T17:05:03.233887+00:00 app[web.1]: npm ERR!     /app/.npm/_logs/2022-09-01T17_05_03_156Z-debug-0.log
+2022-09-01T17:05:03.373720+00:00 heroku[web.1]: Process exited with status 1
+2022-09-01T17:05:03.501810+00:00 heroku[web.1]: State changed from starting to crashed
+2022-09-01T17:05:05.938226+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=gavvahars-rest-rant.herokuapp.com request_id=2e09f394-49d1-4181-bfaf-49d737e627a7 fwd="98.110.36.184" dyno= connect= service= status=503 bytes= protocol=https
+2022-09-01T17:05:06.446688+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/favicon.ico" host=gavvahars-rest-rant.herokuapp.com request_id=4d62d5e8-9b81-4789-94c7-3026806b703f fwd="98.110.36.184" dyno= connect= service= status=503 bytes= protocol=https
+2022-09-01T17:58:54.704962+00:00 heroku[web.1]: State changed from crashed to starting
+2022-09-01T17:59:00.287273+00:00 heroku[web.1]: Starting process with command `npm start`
+2022-09-01T17:59:02.542240+00:00 app[web.1]: npm ERR! Missing script: "start"
+2022-09-01T17:59:02.542394+00:00 app[web.1]: npm ERR!
+2022-09-01T17:59:02.542517+00:00 app[web.1]: npm ERR! Did you mean one of these?
+2022-09-01T17:59:02.542582+00:00 app[web.1]: npm ERR!     npm star # Mark your favorite packages
+2022-09-01T17:59:02.542693+00:00 app[web.1]: npm ERR!     npm stars # View packages marked as favorites
+2022-09-01T17:59:02.542741+00:00 app[web.1]: npm ERR!
+2022-09-01T17:59:02.542785+00:00 app[web.1]: npm ERR! To see a list of scripts, run:
+2022-09-01T17:59:02.542886+00:00 app[web.1]: npm ERR!   npm run
+2022-09-01T17:59:02.544660+00:00 app[web.1]:
+2022-09-01T17:59:02.544824+00:00 app[web.1]: npm ERR! A complete log of this run can be found in:
+2022-09-01T17:59:02.544886+00:00 app[web.1]: npm ERR!     /app/.npm/_logs/2022-09-01T17_59_02_503Z-debug-0.log
+2022-09-01T17:59:02.691549+00:00 heroku[web.1]: Process exited with status 1
+2022-09-01T17:59:02.767072+00:00 heroku[web.1]: State changed from starting to crashed
+2022-09-01T18:00:45.000000+00:00 app[api]: Build started by user nihargavva@hotmail.com
+2022-09-01T18:01:04.620268+00:00 app[api]: Release v6 created by user nihargavva@hotmail.com
+2022-09-01T18:01:04.620268+00:00 app[api]: Deploy 343cfef6 by user nihargavva@hotmail.com
+2022-09-01T18:01:05.000000+00:00 app[api]: Build succeeded
+2022-09-01T18:01:05.637376+00:00 heroku[web.1]: State changed from crashed to starting
+2022-09-01T18:01:08.322677+00:00 heroku[web.1]: Starting process with command `npm start`
+2022-09-01T18:01:10.610688+00:00 app[web.1]: npm ERR! Missing script: "start"
+2022-09-01T18:01:10.610914+00:00 app[web.1]: npm ERR!
+2022-09-01T18:01:10.611028+00:00 app[web.1]: npm ERR! Did you mean one of these?
+2022-09-01T18:01:10.611101+00:00 app[web.1]: npm ERR!     npm star # Mark your favorite packages
+2022-09-01T18:01:10.611231+00:00 app[web.1]: npm ERR!     npm stars # View packages marked as favorites
+2022-09-01T18:01:10.611310+00:00 app[web.1]: npm ERR!
+2022-09-01T18:01:10.611340+00:00 app[web.1]: npm ERR! To see a list of scripts, run:
+2022-09-01T18:01:10.611469+00:00 app[web.1]: npm ERR!   npm run
+2022-09-01T18:01:10.613294+00:00 app[web.1]:
+2022-09-01T18:01:10.613472+00:00 app[web.1]: npm ERR! A complete log of this run can be found in:
+2022-09-01T18:01:10.613540+00:00 app[web.1]: npm ERR!     /app/.npm/_logs/2022-09-01T18_01_10_565Z-debug-0.log
+2022-09-01T18:01:10.765588+00:00 heroku[web.1]: Process exited with status 1
+2022-09-01T18:01:10.847663+00:00 heroku[web.1]: State changed from starting to crashed
+2022-09-01T18:03:50.290063+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=gavvahars-rest-rant.herokuapp.com request_id=938d8aaa-f8d5-4c0c-943e-340d4d9127c9 fwd="98.110.36.184" dyno= connect= service= status=503 bytes= protocol=https
+2022-09-01T18:03:51.112231+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/favicon.ico" host=gavvahars-rest-rant.herokuapp.com request_id=b89ca48a-4713-408f-9687-5419e8a7f917 fwd="98.110.36.184" dyno= connect= service= status=503 bytes= protocol=https
