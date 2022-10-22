@@ -19,7 +19,10 @@ function Def(html){
                         <li>
                             <a href="/places/new">Add Post</a>
                         </li>
-                    </ul>
+
+                      </ul>
+
+                    
                 </nav>
                 {html.children}
             </body>
