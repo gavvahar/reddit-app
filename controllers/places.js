@@ -1,7 +1,12 @@
 const router = require("express").Router();
 const db = require("../models");
 
+router.get("/new", (req, res) => {
+  res.render("places/new");
+});
+
 router.get("/", (req, res) => {
+  // res.render("places/new");
   db.Place.find()
     .then((places) => {
       res.render("places/index", { places });
@@ -30,10 +35,6 @@ router.post("/", (req, res) => {
         res.render("error404");
       }
     });
-});
-
-router.get("/new", (req, res) => {
-  res.render("places/new");
 });
 
 router.get("/:id", (req, res) => {

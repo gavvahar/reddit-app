@@ -3,6 +3,7 @@ require("dotenv").config();
 const express = require("express");
 const app = express();
 const methodOverride = require("method-override");
+const db = require("./models");
 
 // Express Settings
 app.set("views", __dirname + "/views");
@@ -16,12 +17,19 @@ app.use(methodOverride("_method"));
 app.use("/places", require("./controllers/places"));
 
 app.get("/", (req, res) => {
-  res.render("home");
+  db.Place.find()
+    .then((places) => {
+      res.render("places/index", { places });
+    })
+    .catch((err) => {
+      console.log(err);
+      res.render("error404");
+    });
 });
 
-app.get("*", (req, res) => {
-  res.render("error404");
-});
+// app.get("*", (req, res) => {
+//   res.render("error404");
+// });
 
 // Listen for Connections
 app.listen(process.env.PORT);
