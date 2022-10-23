@@ -2,20 +2,20 @@ const React = require('react')
 const Def = require('./default')
 
 function index (data) {
-  let placesFormatted = data.places.map((place) => {
+  let postsFormatted = data.posts.map((post) => {
     return (
       <div key="1" className='col-sm-6'>
         <h2 className='text-center'>
-            <a href={`/places/${place.id}`}>
-              {place.name}
+            <a href={`/places/${post.id}`}>
+              {post.name}
             </a>
           </h2>
         <p className='text-center'>
-          {place.cuisines}
+          {post.cuisines}
         </p>
-        <img src={place.pic} alt={place.name} className='center' width="100%" height="50%"/>
+        <img src={post.pic} alt={post.name} className='center' width="100%" height="50%"/>
         <p className='text-center'>
-          Located in {place.city}, {place.state}
+          Located in {post.city}, {post.state}
         </p>
       </div>
     )
@@ -25,7 +25,7 @@ function index (data) {
         <main>
             <h1>PLACES INDEX PAGE</h1>
             <div className='row'>
-              {placesFormatted}
+              {postsFormatted}
             </div>
         </main>
     </Def>

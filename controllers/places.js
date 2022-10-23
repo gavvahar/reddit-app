@@ -7,9 +7,9 @@ router.get("/new", (req, res) => {
 
 router.get("/", (req, res) => {
   // res.render("places/new");
-  db.Place.find()
-    .then((places) => {
-      res.render("places/index", { places });
+  db.Post.find()
+    .then((posts) => {
+      res.render("places/index", { posts });
     })
     .catch((err) => {
       console.log(err);
@@ -18,7 +18,7 @@ router.get("/", (req, res) => {
 });
 
 router.post("/", (req, res) => {
-  db.Place.create(req.body)
+  db.Post.create(req.body)
     .then(() => {
       res.redirect("/places");
     })
@@ -38,11 +38,11 @@ router.post("/", (req, res) => {
 });
 
 router.get("/:id", (req, res) => {
-  db.Place.findById(req.params.id)
+  db.Post.findById(req.params.id)
     .populate("comments")
-    .then((place) => {
-      console.log(place.comments);
-      res.render("places/show", { place });
+    .then((post) => {
+      console.log(post.comments);
+      res.render("places/show", { post });
     })
     .catch((err) => {
       console.log("err", err);
@@ -51,7 +51,7 @@ router.get("/:id", (req, res) => {
 });
 
 router.put("/:id", (req, res) => {
-  db.Place.findByIdAndUpdate(req.params.id, req.body)
+  db.Post.findByIdAndUpdate(req.params.id, req.body)
     .then(() => {
       res.redirect(`/places/${req.params.id}`);
     })
@@ -62,7 +62,7 @@ router.put("/:id", (req, res) => {
 });
 
 router.delete("/:id", (req, res) => {
-  db.Place.findByIdAndDelete(req.params.id)
+  db.Post.findByIdAndDelete(req.params.id)
     .then((place) => {
       res.redirect("/places");
     })
@@ -73,7 +73,7 @@ router.delete("/:id", (req, res) => {
 });
 
 router.get("/:id/edit", (req, res) => {
-  db.Place.findById(req.params.id)
+  db.Post.findById(req.params.id)
     .then((place) => {
       res.render("places/edit", { place });
     })
@@ -88,12 +88,12 @@ router.post("/:id/rant", (req, res) => {
 
 router.post("/:id/comment", (req, res) => {
   console.log(req.body);
-  db.Place.findById(req.params.id)
-    .then((place) => {
+  db.Post.findById(req.params.id)
+    .then((post) => {
       db.Comment.create(req.body)
         .then((comment) => {
-          place.comments.push(comment.id);
-          place.save().then(() => {
+          post.comments.push(comment.id);
+          post.save().then(() => {
             res.redirect(`/places/${req.params.id}`);
           });
         })

@@ -12,7 +12,7 @@ function show (data) {
         Not yet rated
       </h3>
     )
-    if (data.place.comments.length) {
+    if (data.post.comments.length) {
       let sumRatings = data.place.comments.reduce((tot, c) => {
         return tot + c.stars
       }, 0)
@@ -47,13 +47,13 @@ function show (data) {
           <main>
             <div className="row">
               <div className="col-sm-6">
-                <img src={data.place.pic} alt={data.place.name} />
+                <img src={data.post.pic} alt={data.post.name} />
                 <h3>
-                  Located in {data.place.city}, {data.place.state}
+                  Located in {data.post.city}, {data.post.state}
                 </h3>
               </div>
               <div className="col-sm-6">
-                <h1>{ data.place.name }</h1>
+                <h1>{ data.post.name }</h1>
                 <h2>
                   Rating
                 </h2>
@@ -63,16 +63,16 @@ function show (data) {
                   Description
                 </h2>
                 <h3>
-                  {data.place.showEstablished()}
+                  {data.post.showEstablished()}
                 </h3>
                 <h4>
-                  Serving {data.place.cuisines}
+                  Serving {data.post.cuisines}
                 </h4>
                 <br />
-                <a href={`/places/${data.place.id}/edit`} className="btn btn-warning">
+                <a href={`/places/${data.post.id}/edit`} className="btn btn-warning">
                   Edit
                 </a>{` `}
-                <form method="POST" action={`/places/${data.place.id}?_method=DELETE`}>
+                <form method="POST" action={`/places/${data.post.id}?_method=DELETE`}>
                   <button type="submit" className="btn btn-danger">
                     Delete
                   </button>
@@ -86,7 +86,7 @@ function show (data) {
             </div>
             <hr />
             <h2>Got Your Own Rant or Rave?</h2>
-            <form action={`/places/${data.place.id}/comment`} method="POST">
+            <form action={`/places/${data.post.id}/comment`} method="POST">
               <div className="row">
                 <div className="form-group col-sm-12">
                   <label htmlFor="content">Content</label>

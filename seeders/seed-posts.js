@@ -1,6 +1,6 @@
 const db = require("../models");
 
-db.Place.create([
+db.Post.create([
   {
     name: "H-Thai-ML",
     city: "Seattle",

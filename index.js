@@ -17,9 +17,9 @@ app.use(methodOverride("_method"));
 app.use("/places", require("./controllers/places"));
 
 app.get("/", (req, res) => {
-  db.Place.find()
-    .then((places) => {
-      res.render("places/index", { places });
+  db.Post.find()
+    .then((posts) => {
+      res.render("places/index", { posts });
     })
     .catch((err) => {
       console.log(err);
