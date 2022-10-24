@@ -29,5 +29,7 @@ const postSchema = new mongoose.Schema({
   title: { type: String, required: true },
 });
 
-postSchema.methods.showEstablished = function () {};
+postSchema.methods.showEstablished = function () {
+  return `${this.user}`;
+};
 module.exports = mongoose.model("Post", postSchema);
