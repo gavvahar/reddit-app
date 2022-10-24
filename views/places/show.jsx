@@ -47,13 +47,11 @@ function show (data) {
           <main>
             <div className="row">
               <div className="col-sm-6">
-                <img src={data.post.pic} alt={data.post.name} />
-                <h3>
-                  Located in {data.post.city}, {data.post.state}
-                </h3>
+                <img src={data.post.pic} alt={data.post.title} />
+               
               </div>
               <div className="col-sm-6">
-                <h1>{ data.post.name }</h1>
+                <h1>{ data.post.title }</h1>
                 <h2>
                   Rating
                 </h2>
@@ -65,9 +63,7 @@ function show (data) {
                 <h3>
                   {data.post.showEstablished()}
                 </h3>
-                <h4>
-                  Serving {data.post.cuisines}
-                </h4>
+                
                 <br />
                 <a href={`/places/${data.post.id}/edit`} className="btn btn-warning">
                   Edit

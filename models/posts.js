@@ -27,6 +27,7 @@ const postSchema = new mongoose.Schema({
   pic: { type: String },
   description: { type: String, required: true },
   title: { type: String, required: true },
+  comments: [{ type: mongoose.Schema.Types.ObjectId, ref: "Comment" }],
 });
 
 postSchema.methods.showEstablished = function () {
