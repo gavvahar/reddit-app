@@ -9,7 +9,7 @@ function Def(html){
             </head>
             <body>
                 <nav>
-                    <form>
+                    <form >
                         <h2>Search</h2>
                         <input type='text' placeholder='Search For a Post' />
                         <button>Submit</button>
