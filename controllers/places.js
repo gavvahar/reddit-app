@@ -17,6 +17,17 @@ router.get("/", (req, res) => {
     });
 });
 
+// router.get("/", (req, res) => {
+//   db.Post.find({title: req.params.id})
+//     .then((posts) => {
+//       res.render("places/searchbar", { posts });
+//     })
+//     .catch((err) => {
+//       console.log(err);
+//       res.render("error404");
+//     });
+// });
+
 router.post("/", (req, res) => {
   db.Post.create(req.body)
     .then(() => {
@@ -37,6 +48,8 @@ router.post("/", (req, res) => {
     });
 });
 
+
+
 router.get("/:id", (req, res) => {
   db.Post.findById(req.params.id)
     .populate("comments")
@@ -49,6 +62,8 @@ router.get("/:id", (req, res) => {
       res.render("error404");
     });
 });
+
+
 
 router.put("/:id", (req, res) => {
   db.Post.findByIdAndUpdate(req.params.id, req.body)
