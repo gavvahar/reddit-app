@@ -1,21 +1,19 @@
 const db = require("../models");
 
-db.Place.create([
+db.Post.create([
   {
-    name: "H-Thai-ML",
-    city: "Seattle",
-    state: "WA",
-    cuisines: "Thai, Pan-Asian",
+    user:"nihar",
+    title: "H-Thai-ML",
+    description:" asdsaashdhajshdjashdjhajd ",
     pic: "/images/large.jpg",
-    founded: 1989,
+    
   },
   {
-    name: "Coding Cat Cafe",
-    city: "Phoenix",
-    state: "AZ",
-    cuisines: "Coffee, Bakery",
+    user:"alex",
+    title: "Coding Cat Cafe",
+    description:" asdashdhajshdjashdjhajd ",
     pic: "/images/the-interior.jpg",
-    founded: 2020,
+    
   },
 ])
   .then(() => {

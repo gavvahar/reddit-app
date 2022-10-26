@@ -17,15 +17,35 @@ app.use(methodOverride("_method"));
 app.use("/places", require("./controllers/places"));
 
 app.get("/", (req, res) => {
-  db.Place.find()
-    .then((places) => {
-      res.render("places/index", { places });
+  db.Post.find()
+    .then((posts) => {
+      res.render("places/index", { posts });
     })
     .catch((err) => {
       console.log(err);
       res.render("error404");
     });
 });
+
+// exports.getSearch = (req, res, next) => { 
+//     const title = req.body.title;
+//     Product.find({ title: { $regex: title, $options: "i" } })
+//         .then(title => {
+//             res.render('places/index', {
+//             prods:  title ,
+//             pageTitle: 'All Post',
+//             path: '/places'  
+//             });
+//         })
+//         .catch(err => {
+//           console.log(err);
+//         });
+//     }
+// app.post('/', (req, res) => {
+ 
+//   res.send('POST /places')
+//    console.log(req.body)
+// })
 
 // app.get("*", (req, res) => {
 //   res.render("error404");

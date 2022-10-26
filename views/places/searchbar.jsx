@@ -1,7 +1,7 @@
 const React = require('react')
 const Def = require('./default')
 
-function index (data) {
+function searchbar (data) {
   let postsFormatted = data.posts.map((post) => {
     return (
       <div key="1" className='col-sm-6'>
@@ -21,11 +21,11 @@ function index (data) {
         <main>
             <h1>PLACES INDEX PAGE</h1>
             <div className='row'>
-              {postsFormatted}
+              {/* {postsFormatted} */}
             </div>
         </main>
     </Def>
 )
 }
 
-module.exports = index
+module.exports = searchbar
