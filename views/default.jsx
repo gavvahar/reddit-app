@@ -19,9 +19,9 @@ function Def(html){
                         <li>
                             <a href="/">Home</a>
                         </li>
-                        <li>
+                        {/* <li>
                             <a href="/places">Posts</a>
-                        </li>
+                        </li> */}
                         <li>
                             <a href="/places/new">Add Post</a>
                         </li>
