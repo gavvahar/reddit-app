@@ -13,8 +13,8 @@ function Def(html){
                     <div>
                     <form>
                         <h2>Search</h2>
-                        <input  type='text' placeholder='Search For a Post' name='title' />
-                        <button className="btn btn-success">Submit</button>
+                        <input type='text' placeholder='Search For a Post' />
+                        <button>Submit</button>
                     </form>
                     </div>
                     <ul>
