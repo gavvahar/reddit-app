@@ -1,6 +1,8 @@
 const router = require("express").Router();
 const db = require("../models");
 
+
+
 router.get("/new", (req, res) => {
   res.render("places/new");
 });
@@ -17,6 +19,8 @@ router.get("/", (req, res) => {
     });
 });
 
+
+
 // router.get("/", (req, res) => {
 //   db.Post.find({title: req.params.id})
 //     .then((posts) => {
@@ -27,6 +31,21 @@ router.get("/", (req, res) => {
 //       res.render("error404");
 //     });
 // });
+router.post("/searchbar", (req, res) => {
+  // res.render("places/new");
+  console.log(req.body.title)
+  
+  const title = req.body.title;
+  db.Post.find({title:  { $regex: title, $options: "i" }})
+    
+    .then((posts) => {
+      res.render("places/searchbar", { posts });
+    })
+    .catch((err) => {
+      console.log(err);
+      res.render("error404");
+    });
+});
 
 router.post("/", (req, res) => {
   db.Post.create(req.body)
@@ -47,7 +66,6 @@ router.post("/", (req, res) => {
       }
     });
 });
-
 
 
 router.get("/:id", (req, res) => {
@@ -89,8 +107,8 @@ router.delete("/:id", (req, res) => {
 
 router.get("/:id/edit", (req, res) => {
   db.Post.findById(req.params.id)
-    .then((place) => {
-      res.render("places/edit", { place });
+    .then((post) => {
+      res.render("places/edit", { post });
     })
     .catch((err) => {
       res.render("error404");

@@ -15,7 +15,7 @@ function edit_form (data) {
           className='form-control'
           id="title"
           name='title'
-          value={data.place.title}
+          value={data.post.title}
           required/>
       </div>
       <div className="form-group col-sm-6">
@@ -24,7 +24,7 @@ function edit_form (data) {
           className='form-control'
           id="pic"
           name='pic'
-          value={data.place.pic}
+          value={data.post.pic}
           />
       </div>
        <div className="form-group col-sm-6">
@@ -33,7 +33,7 @@ function edit_form (data) {
           className='form-control'
           id="description"
           name='description'
-          value={data.place.description}
+          value={data.post.description}
           />
       </div> 
          
