@@ -7,15 +7,15 @@ function edit_form (data) {
           <main>
             <h1>Edit Place</h1>
           </main>
-          <form method="POST" action={`/places/${data.place.id}?_method=PUT`}>
+          <form method="POST" action={`/places/${data.post.id}?_method=PUT`}>
   <div className="row">
       <div className="form-group col-sm-6">
-          <label htmlFor="name">Place Name</label>
+          <label htmlFor="title">Title</label>
           <input
           className='form-control'
-          id="name"
-          name='name'
-          value={data.place.name}
+          id="title"
+          name='title'
+          value={data.place.title}
           required/>
       </div>
       <div className="form-group col-sm-6">
@@ -27,41 +27,17 @@ function edit_form (data) {
           value={data.place.pic}
           />
       </div>
-      <div className="form-group col-sm-6">
-          <label htmlFor="city">Place City</label>
+       <div className="form-group col-sm-6">
+          <label htmlFor="description">Description</label>
           <input
           className='form-control'
-          id="city"
-          name='city'
-          value={data.place.city}
+          id="description"
+          name='description'
+          value={data.place.description}
           />
-      </div>
-      <div className="form-group col-sm-6">
-          <label htmlFor="state">Place State</label>
-          <input
-          className='form-control'
-          id="state"
-          name='state'
-          value={data.place.state}
-          />
-      </div>
-      <div className="form-group col-sm-6">
-          <label htmlFor="cuisines">Place Cuisines</label>
-          <input
-          className='form-control'
-          id="cuisines"
-          name='cuisines'
-          value={data.place.cuisines}
-          required/>
-      </div>
-      <div className='form-group col-sm-4'>
-        <label htmlFor="founded">Founded</label>
-        <input className='form-control'
-            id='founded'
-            name='founded'
-            value={data.place.founded}
-        />
-      </div>
+      </div> 
+         
+   
   </div>
   <input className="btn btn-primary" type="submit" value="Add Place" />
 </form>

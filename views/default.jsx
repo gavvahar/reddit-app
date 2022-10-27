@@ -1,4 +1,5 @@
 const React = require('react')
+
 function Def(html){
     return(
         <html>
@@ -9,15 +10,20 @@ function Def(html){
             </head>
             <body>
                 <nav>
+                    <form method="POST" action={"/places"}>
+                        <h2>Search</h2>
+                        <input type='text' placeholder='Search For a Post' name='title' />
+                        <button type="submit" className="btn btn-danger">Submit</button>
+                    </form>
                     <ul>
                         <li>
                             <a href="/">Home</a>
                         </li>
                         <li>
-                            <a href="/places">Places</a>
+                            <a href="/places">Posts</a>
                         </li>
                         <li>
-                            <a href="/places/new">Add Place</a>
+                            <a href="/places/new">Add Post</a>
                         </li>
                     </ul>
                 </nav>
