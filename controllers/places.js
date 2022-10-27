@@ -1,8 +1,6 @@
 const router = require("express").Router();
 const db = require("../models");
 
-
-
 router.get("/new", (req, res) => {
   res.render("places/new");
 });
@@ -19,8 +17,6 @@ router.get("/", (req, res) => {
     });
 });
 
-
-
 // router.get("/", (req, res) => {
 //   db.Post.find({title: req.params.id})
 //     .then((posts) => {
@@ -33,11 +29,11 @@ router.get("/", (req, res) => {
 // });
 router.post("/searchbar", (req, res) => {
   // res.render("places/new");
-  console.log(req.body.title)
-  
+  console.log(req.body.title);
+
   const title = req.body.title;
-  db.Post.find({title:  { $regex: title, $options: "i" }})
-    
+  db.Post.find({ title: { $regex: title, $options: "i" } })
+
     .then((posts) => {
       res.render("places/searchbar", { posts });
     })
@@ -67,7 +63,6 @@ router.post("/", (req, res) => {
     });
 });
 
-
 router.get("/:id", (req, res) => {
   db.Post.findById(req.params.id)
     .populate("comments")
@@ -80,8 +75,6 @@ router.get("/:id", (req, res) => {
       res.render("error404");
     });
 });
-
-
 
 router.put("/:id", (req, res) => {
   db.Post.findByIdAndUpdate(req.params.id, req.body)
@@ -96,7 +89,7 @@ router.put("/:id", (req, res) => {
 
 router.delete("/:id", (req, res) => {
   db.Post.findByIdAndDelete(req.params.id)
-    .then((place) => {
+    .then((post) => {
       res.redirect("/places");
     })
     .catch((err) => {
