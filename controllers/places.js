@@ -27,6 +27,21 @@ router.get("/", (req, res) => {
 //       res.render("error404");
 //     });
 // });
+router.post("/searchbar", (req, res) => {
+  // res.render("places/new");
+  console.log(req.body.title);
+
+  const title = req.body.title;
+  db.Post.find({ title: { $regex: title, $options: "i" } })
+
+    .then((posts) => {
+      res.render("places/searchbar", { posts });
+    })
+    .catch((err) => {
+      console.log(err);
+      res.render("error404");
+    });
+});
 
 router.post("/", (req, res) => {
   db.Post.create(req.body)
@@ -48,8 +63,6 @@ router.post("/", (req, res) => {
     });
 });
 
-
-
 router.get("/:id", (req, res) => {
   db.Post.findById(req.params.id)
     .populate("comments")
@@ -62,8 +75,6 @@ router.get("/:id", (req, res) => {
       res.render("error404");
     });
 });
-
-
 
 router.put("/:id", (req, res) => {
   db.Post.findByIdAndUpdate(req.params.id, req.body)
@@ -78,7 +89,7 @@ router.put("/:id", (req, res) => {
 
 router.delete("/:id", (req, res) => {
   db.Post.findByIdAndDelete(req.params.id)
-    .then((place) => {
+    .then((post) => {
       res.redirect("/places");
     })
     .catch((err) => {
@@ -89,8 +100,8 @@ router.delete("/:id", (req, res) => {
 
 router.get("/:id/edit", (req, res) => {
   db.Post.findById(req.params.id)
-    .then((place) => {
-      res.render("places/edit", { place });
+    .then((post) => {
+      res.render("places/edit", { post });
     })
     .catch((err) => {
       res.render("error404");
