@@ -29,27 +29,51 @@ function Def(html){
                         </li>
                     </ul>
                 </nav>
-                <div className='container'>
-                        <form className='form' id='login'>
-                            <h1 className='form__title'>Login</h1>
-                            <div className='form__message form__messgae--error'>Incorrect username/password combination.</div>
-                            <div className='form__input-group'>
-                                <input type="text" className='form__input' autoFocus placeholder='Username or email' />
-                                <div className="form__input-error-message">This is an error message</div>
-                            </div>
-                            <div className='form__input-group'>
-                                <input type="password" className='form__input' autoFocus placeholder='Password' />
-                                <div className="form__input-error-message"></div>
-                            </div>
-                            <button className="form__button" type='submit'>Continue</button>
-                            <p className="form__text">
-                                <a href="#" className="form__link">Forgot your password</a>
-                            </p>
-                            <p className="form__text">
-                                <a className="form__link" href='./' id='linkCreateAccount'>Don't have an account? Create an account</a>
-                            </p>
-                        </form>
-                    </div>
+                <div className="container">
+        <form className="form" id="login">
+            <h1 className="form__title">Login</h1>
+            <div className="form__message form__message--error"></div>
+            <div className="form__input-group">
+                <input type="text" className="form__input" autofocus placeholder="Username or email" />
+                <div className="form__input-error-message"></div>
+            </div>
+            <div className="form__input-group">
+                <input type="password" className="form__input" autofocus placeholder="Password" />
+                <div className="form__input-error-message"></div>
+            </div>
+            <button className="form__button" type="submit">Continue</button>
+            <p className="form__text">
+                <a href="#" className="form__link">Forgot your password?</a>
+            </p>
+            <p className="form__text">
+                <a className="form__link" href="./" id="linkCreateAccount">Don't have an account? Create account</a>
+            </p>
+        </form>
+        <form className="form form--hidden" id="createAccount">
+            <h1 className="form__title">Create Account</h1>
+            <div className="form__message form__message--error"></div>
+            <div className="form__input-group">
+                <input type="text" id="signupUsername" className="form__input" autofocus placeholder="Username" />
+                <div className="form__input-error-message"></div>
+            </div>
+            <div className="form__input-group">
+                <input type="text" className="form__input" autofocus placeholder="Email Address" />
+                <div className="form__input-error-message"></div>
+            </div>
+            <div className="form__input-group">
+                <input type="password" className="form__input" autofocus placeholder="Password" />
+                <div className="form__input-error-message"></div>
+            </div>
+            <div className="form__input-group">
+                <input type="password" className="form__input" autofocus placeholder="Confirm password" />
+                <div className="form__input-error-message"></div>
+            </div>
+            <button className="form__button" type="submit">Continue</button>
+            <p className="form__text">
+                <a className="form__link" href="./" id="linkLogin">Already have an account? Sign in</a>
+            </p>
+        </form>
+    </div>
                 {html.children}
             </body>
         </html>
