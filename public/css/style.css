@@ -6,6 +6,9 @@ h1{
 nav {
     background-color: cornflowerblue;
     padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-around;
 }
 
 nav ul {

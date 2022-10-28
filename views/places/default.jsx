@@ -28,8 +28,7 @@ function Def(html){
                             <a href="/places/new">Add Post</a>
                         </li>
                     </ul>
-                </nav>
-                <div className="container">
+                    <div className="container">
         <form className="form" id="login">
             <h1 className="form__title">Login</h1>
             <div className="form__message form__message--error"></div>
@@ -74,7 +73,11 @@ function Def(html){
             </p>
         </form>
     </div>
+    
+                </nav>
+                
                 {html.children}
+                
             </body>
         </html>
     )
