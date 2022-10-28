@@ -2,7 +2,7 @@ const React = require('react')
 const Def = require('./default')
 
 function searchbar (data) {
-  let postsFormatted = data.posts.map((post) => {
+  let postsFormatted2= data.posts.map((post) => {
     return (
       <div key="1" className='col-sm-6'>
         <h2 className='text-center'>
@@ -21,7 +21,7 @@ function searchbar (data) {
         <main>
             <h1>PLACES INDEX PAGE</h1>
             <div className='row'>
-              {/* {postsFormatted} */}
+              {postsFormatted2}
             </div>
         </main>
     </Def>

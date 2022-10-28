@@ -10,10 +10,10 @@ function Def(html){
             </head>
             <body>
                 <nav>
-                    <form method="POST" action={"/places"}>
+                    <form method="POST" action={"/places/searchbar"}>
                         <h2>Search</h2>
                         <input type='text' placeholder='Search For a Post' name='title' />
-                        <button type="submit" className="btn btn-danger">Submit</button>
+                        <button type="submit" className="btn btn-success">Submit</button>
                     </form>
                     <ul>
                         <li>
