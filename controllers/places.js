@@ -3,6 +3,7 @@ const db = require("../models");
 
 
 
+
 router.get("/new", (req, res) => {
   res.render("places/new");
 });
@@ -21,6 +22,7 @@ router.get("/", (req, res) => {
 
 
 
+
 // router.get("/", (req, res) => {
 //   db.Post.find({title: req.params.id})
 //     .then((posts) => {
@@ -31,9 +33,9 @@ router.get("/", (req, res) => {
 //       res.render("error404");
 //     });
 // });
+
 router.post("/searchbar", (req, res) => {
-  // res.render("places/new");
-  console.log(req.body.title)
+console.log(req.body.title)
   
   const title = req.body.title;
   db.Post.find({title:  { $regex: title, $options: "i" }})
@@ -46,6 +48,8 @@ router.post("/searchbar", (req, res) => {
       res.render("error404");
     });
 });
+
+
 
 router.post("/", (req, res) => {
   db.Post.create(req.body)
