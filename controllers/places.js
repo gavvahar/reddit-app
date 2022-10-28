@@ -27,6 +27,7 @@ router.get("/", (req, res) => {
 //       res.render("error404");
 //     });
 // });
+
 router.post("/searchbar", (req, res) => {
   // res.render("places/new");
   console.log(req.body.title);
@@ -42,6 +43,8 @@ router.post("/searchbar", (req, res) => {
       res.render("error404");
     });
 });
+
+
 
 router.post("/", (req, res) => {
   db.Post.create(req.body)

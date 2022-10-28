@@ -19,7 +19,16 @@ function index (data) {
   return (
     <Def>
         <main>
-            <h1>PLACES INDEX PAGE</h1>
+            {/* <h1>Recent Question</h1> */}
+            <form method="POST" action={`/places`} className="postForm2">
+                <div className="form-group">
+                    {/* <label htmlFor="name">Ask a question</label> */}
+                    <input className="form-control" id="title" name="title" required value="What do you want to ask or Share?" />
+                </div>
+              
+                                             
+                <input className="btn btn-primary" type="submit" value="Ask/Post" />
+            </form>
             <div className='row'>
               {postsFormatted}
             </div>

@@ -11,9 +11,8 @@ function Def(html){
             <body>
                 <nav>
                     <form method="POST" action={`places/searchbar`}>
-                        <h2>Search</h2>
                         <input  type='text' placeholder='Search For a Post' name='title' />
-                        <button className="btn btn-success">Submit</button>
+                        <button className="btn btn-success">Search</button>
                     </form>
                     <ul>
                         <li>
