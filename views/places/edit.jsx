@@ -7,7 +7,7 @@ function edit_form (data) {
           <main>
             <h1>Edit Place</h1>
           </main>
-          <form method="POST" action={`/places/${data.post.id}?_method=PUT`}>
+          <form method="POST" action={`/places/${data.post.id}?_method=PUT` } className="postForm">
   <div className="row">
       <div className="form-group col-sm-6">
           <label htmlFor="title">Title</label>

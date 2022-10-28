@@ -14,7 +14,7 @@ function new_form (data) {
           <main>
             <h1>Add a New Post</h1>
             {message}
-            <form method="POST" action={`/places`}>
+            <form method="POST" action={`/places`} className="postForm">
                 <div className="form-group">
                     <label htmlFor="name">Title</label>
                     <input className="form-control" id="title" name="title" required />
