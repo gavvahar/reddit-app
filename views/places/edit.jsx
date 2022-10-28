@@ -5,9 +5,9 @@ function edit_form (data) {
     return (
         <Def>
           <main>
-            <h1>Edit Place</h1>
+            <h1>Edit Post</h1>
           </main>
-          <form method="POST" action={`/places/${data.post.id}?_method=PUT` } className="postForm">
+          <form method="POST" action={`/places/${data.post.id}?_method=PUT` } >
   <div className="row">
       <div className="form-group col-sm-6">
           <label htmlFor="title">Title</label>
