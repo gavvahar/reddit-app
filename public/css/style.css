@@ -6,9 +6,7 @@ h1{
 nav {
     background-color: cornflowerblue;
     padding: 10px;
-    display: flex;
-    flex-direction: row;
-    justify-content:space-around;
+    
 }
 
 nav ul {
@@ -157,4 +155,14 @@ img {
 
 .form__link:hover {
     text-decoration: underline;
+}
+
+.postForm {
+    width: 400px;
+        max-width: 400px;
+        margin: auto;
+        padding: 2rem;
+        box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
+        border-radius: var(--border-radius);
+        background: #ffffff;
 }
