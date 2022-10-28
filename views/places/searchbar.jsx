@@ -19,7 +19,7 @@ function searchbar (data) {
   return (
     <Def>
         <main>
-            <h1>PLACES INDEX PAGE</h1>
+            <h1>Question you may be looking for.</h1>
             <div className='row'>
               {postsFormatted2}
             </div>

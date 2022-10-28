@@ -159,11 +159,21 @@ img {
 }
 
 .postForm {
-    width: 400px;
-    max-width: 400px;
+    width: 600px;
+    max-width: 600px;
     margin: auto;
     padding: 2rem;
     box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
     border-radius: var(--border-radius);
     background: #ffffff;
+}
+
+.postForm2 {
+    width: 600px;
+    max-width: 600px;
+    margin: auto;
+    padding: 1em;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
+    border-radius: var(--border-radius);
+    background: transparent;
 }
