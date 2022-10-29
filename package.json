@@ -25,10 +25,10 @@
   "devDependencies": {},
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gavvahar/rest-rant.git"
+    "url": "git+https://github.com/gavvahar/reddit-app.git"
   },
   "bugs": {
-    "url": "https://github.com/gavvahar/rest-rant/issues"
+    "url": "https://github.com/gavvahar/reddit-app/issues"
   },
-  "homepage": "https://github.com/gavvahar/rest-rant#readme"
+  "homepage": "https://github.com/gavvahar/reddit-app/blob/main/README.md#what-is-ansr"
 }
