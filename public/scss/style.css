@@ -1,10 +1,10 @@
 h1 {
   text-align: center;
-  color: cornflowerblue;
+  color: #aa0505;
 }
 
 nav {
-  background-color: cornflowerblue;
+  background-color: #aa0505;
   padding: 10px;
 }
 
@@ -24,12 +24,12 @@ nav a {
 }
 
 nav a:hover {
-  color: pink;
+  color: #BA7E10;
   text-decoration: none;
 }
 
 body {
-  background-color: lightblue;
+  background-color: #fbca03;
   text-align: center;
 }
 
@@ -45,13 +45,14 @@ img {
 }
 
 .container {
+  align-items: center;
   width: 400px;
   max-width: 400px;
   margin: 1rem;
   padding: 2rem;
   box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
   border-radius: var(--border-radius);
-  background: #ffffff;
+  background: #fbca03;
 }
 
 .container,
