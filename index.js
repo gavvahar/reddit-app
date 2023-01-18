@@ -8,6 +8,9 @@ const db = require("./models");
 const userRoutes = require("./routes/user")
 const bodyParser = require("body-parser")
 const morgan = require("morgan")
+const cors = require('cors');
+const cookieParser = require('cookie-parser');
+const errorHandler = require('./middleware/error');
 
 //Database connection
 mongoose.connect(process.env.MONGO_URI, {
@@ -18,6 +21,10 @@ mongoose.connect(process.env.MONGO_URI, {
 .then(()=> console.log('DB connected'))
 .catch((err)=> console.log(err));
 
+//IMPORT ROUTES
+const authRoutes = require('./routes/auth');
+
+
 // Express Settings
 app.set("views", __dirname + "/views");
 app.set("view engine", "jsx");
@@ -25,6 +32,24 @@ app.engine("jsx", require("express-react-views").createEngine());
 app.use(express.static("public"));
 app.use(express.urlencoded({ extended: true }));
 app.use(methodOverride("_method"));
+
+//Middleware
+app.use(morgan('dev'));
+app.use(bodyParser.json({limit: '100mb'}));
+app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
+    limit: '100mb',
+    extended: true
+    }));
+app.use(cookieParser());
+app.use(cors());
+
+// ROUTES MIDDLEWARE
+app.use("/api", authRoutes)
+
+
+//Error handling
+app.use(errorHandler);
+
 app.use("/api", userRoutes)
 app.use(morgan('dev'))
 app.use(bodyParser.json())
