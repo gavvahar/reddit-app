@@ -2,11 +2,21 @@
 require("dotenv").config();
 const express = require("express");
 const app = express();
+const mongoose = require("mongoose")
 const methodOverride = require("method-override");
 const db = require("./models");
 const userRoutes = require("./user")
 const bodyParser = require("body-parser")
 const morgan = require("morgan")
+
+//Database connection
+mongoose.connect(process.env.MONGO_URI, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    useCreateIndex: true
+})
+.then(()=> console.log('DB connected'))
+.catch((err)=> console.log(err));
 
 // Express Settings
 app.set("views", __dirname + "/views");
