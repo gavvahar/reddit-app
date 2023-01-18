@@ -8,3 +8,4 @@ mongoose.connect(process.env.MONGO_URI, {
 
 module.exports.Post = require("./posts");
 module.exports.Comment = require("./comment");
+module.exports.User = require("./user")
