@@ -1,7 +1,8 @@
 const User = require("../models/user");
+const ErrorResponse = require('../utils/errorResponse');
 
 
-
+//Sign Up
 exports.signup = async (req, res, next)=>{
 
     const {email} = req.body;
@@ -27,6 +28,7 @@ exports.signup = async (req, res, next)=>{
    
 }
 
+//Sign In
 exports.signin = async (req, res, next)=>{
 
     try{
@@ -58,4 +60,20 @@ exports.signin = async (req, res, next)=>{
         next(new ErrorResponse('Cannot log in, check your credentials', 400))
     }
    
+}
+
+// Token generation
+const generateToken = async (user, statusCode, res) =>{
+
+    const token = await user.jwtGenerateToken();
+
+    const options = {
+        httpOnly: true,
+        expires: new Date(Date.now() + process.env.EXPIRE_TOKEN)
+    };
+
+    res
+    .status(statusCode)
+    .cookie('token', token, options )
+    .json({success: true, token})
 }
