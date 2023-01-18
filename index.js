@@ -4,6 +4,9 @@ const express = require("express");
 const app = express();
 const methodOverride = require("method-override");
 const db = require("./models");
+const userRoutes = require("./user")
+const bodyParser = require("body-parser")
+const morgan = require("morgan")
 
 // Express Settings
 app.set("views", __dirname + "/views");
@@ -12,6 +15,9 @@ app.engine("jsx", require("express-react-views").createEngine());
 app.use(express.static("public"));
 app.use(express.urlencoded({ extended: true }));
 app.use(methodOverride("_method"));
+app.use("/api", userRoutes)
+app.use(morgan('dev'))
+app.use(bodyParser.json())
 
 // Controllers & Routes
 app.use("/places", require("./controllers/places"));
