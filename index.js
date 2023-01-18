@@ -5,7 +5,7 @@ const app = express();
 const mongoose = require("mongoose")
 const methodOverride = require("method-override");
 const db = require("./models");
-const userRoutes = require("./user")
+const userRoutes = require("./routes/user")
 const bodyParser = require("body-parser")
 const morgan = require("morgan")
 

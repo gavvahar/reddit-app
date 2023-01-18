@@ -1,8 +1,7 @@
 const User = require("../models/user");
+const ErrorResponse = require('../utils/errorResponse');
 
 
-
-//Sign Up
 exports.signup = async (req, res, next)=>{
 
     const {email} = req.body;
@@ -28,7 +27,7 @@ exports.signup = async (req, res, next)=>{
    
 }
 
-//Sign In
+
 exports.signin = async (req, res, next)=>{
 
     try{
@@ -62,7 +61,7 @@ exports.signin = async (req, res, next)=>{
    
 }
 
-// Token generation
+
 const generateToken = async (user, statusCode, res) =>{
 
     const token = await user.jwtGenerateToken();
@@ -76,4 +75,33 @@ const generateToken = async (user, statusCode, res) =>{
     .status(statusCode)
     .cookie('token', token, options )
     .json({success: true, token})
+}
+
+
+//LOG OUT USER
+exports.logout = (req, res, next)=>{
+    res.clearCookie('token');
+    res.status(200).json({
+        success: true,
+        message: "Logged out"
+    })
+}
+
+
+
+
+exports.singleUser = async (req, res, next)=>{
+
+    try {
+        const user = await User.findById(req.params.id);
+        res.status(200).json({
+            sucess: true,
+            user
+        })
+        
+    } catch (error) {
+        next(error)
+        
+    }
+   
 }
