@@ -2,18 +2,16 @@ const db = require("../models");
 
 db.Post.create([
   {
-    user:"nihar",
+    user: "nihar",
     title: "H-Thai-ML",
-    description:" asdsaashdhajshdjashdjhajd ",
+    description: " asdsaashdhajshdjashdjhajd ",
     pic: "/images/large.jpg",
-    
   },
   {
-    user:"alex",
+    user: "alex",
     title: "Coding Cat Cafe",
-    description:" asdashdhajshdjashdjhajd ",
+    description: " asdashdhajshdjashdjhajd ",
     pic: "/images/the-interior.jpg",
-    
   },
 ])
   .then(() => {
