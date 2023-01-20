@@ -67,8 +67,7 @@ const generateToken = async (user, statusCode, res) =>{
     const token = await user.jwtGenerateToken();
 
     const options = {
-        httpOnly: true,
-        expires: new Date(Date.now() + process.env.EXPIRE_TOKEN)
+        httpOnly: true
     };
 
     res
