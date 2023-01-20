@@ -6,6 +6,7 @@ const mongoose = require("mongoose")
 const methodOverride = require("method-override");
 const db = require("./models");
 const userRoutes = require("./routes/user")
+const authRoutes = require('./routes/auth');
 const bodyParser = require("body-parser")
 const morgan = require("morgan")
 const cors = require('cors');
@@ -20,9 +21,6 @@ mongoose.connect(process.env.MONGO_URI, {
 })
 .then(()=> console.log('DB connected'))
 .catch((err)=> console.log(err));
-
-//IMPORT ROUTES
-const authRoutes = require('./routes/auth');
 
 
 // Express Settings
