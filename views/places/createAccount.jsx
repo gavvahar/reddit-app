@@ -3,7 +3,7 @@ const user = require('../../models/user')
 const Def = require('../default')
 function createAccount(data) {
     return (
-    
+            <Def>
             <main>
                 <form className="form " id="createAccount" method='POST' action='/api/signup' >
             <h1 className="form__title">Create Account</h1>
@@ -27,7 +27,7 @@ function createAccount(data) {
             </p>
         </form>
             </main>
-        
+        </Def>
     )
 }
 
