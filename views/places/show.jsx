@@ -61,7 +61,7 @@ function show (data) {
                   Description
                 </h2>
                 <h3>
-                  {data.post.showEstablished()}
+                  {data.post.description}
                 </h3>
                 
                 <br />
