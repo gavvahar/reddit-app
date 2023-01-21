@@ -39,7 +39,7 @@ body {
 main {
     margin-right: $main-margin;
     margin-left: $main-margin;
-    background-color: $a-color;
+    background-color: $body-color;
 }
 
 img {
@@ -52,7 +52,7 @@ img {
     
     width: 400px;
     max-width: 400px;
-    margin: 1rem;
+    // margin: 1rem;
     padding: 2rem;
     box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
     border-radius: var(--border-radius);
