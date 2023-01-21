@@ -12,6 +12,7 @@ function new_form (data) {
     return (
         <Def>
           <main>
+            <div className="postForm">
             <h1>Add a New Post</h1>
             {message}
             <form method="POST" action={`/places`} className="postForm">
@@ -31,6 +32,7 @@ function new_form (data) {
                 
                 <input className="btn btn-primary" type="submit" value="Add Post" />
             </form>
+            </div>
           </main>
         </Def>
     )

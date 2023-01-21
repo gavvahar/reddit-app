@@ -4,7 +4,7 @@ const db = require("../models");
 async function seed() {
   // Get the place, H-Thai-ML
   let place = await db.Post.findOne({ name: "H-Thai-ML" });
-
+  let Username = await db.User.findOne({ name: "Bachir" });
   // Create a fake sample comment.
   let comment = await db.Comment.create({
     author: "Famished Fran",

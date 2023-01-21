@@ -1,4 +1,4 @@
-h1 {
+h1{
     text-align: center;
     color: cornflowerblue;
 }
@@ -6,7 +6,7 @@ h1 {
 nav {
     background-color: cornflowerblue;
     padding: 10px;
-
+    
 }
 
 nav ul {
@@ -28,16 +28,15 @@ nav a:hover {
     color: pink;
     text-decoration: none;
 }
-
 body {
-    background-color: lightblue;
-    text-align: center;
+  background-color: lightblue;
+  text-align: center;
 }
 
 main {
-    margin-right: 20px;
-    margin-left: 20px;
-
+  margin-right: 20px;
+  margin-left: 20px;
+  
 }
 
 img {
@@ -159,21 +158,11 @@ img {
 }
 
 .postForm {
-    width: 600px;
-    max-width: 600px;
-    margin: auto;
-    padding: 2rem;
-    box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
-    border-radius: var(--border-radius);
-    background: #ffffff;
-}
-
-.postForm2 {
-    width: 600px;
-    max-width: 600px;
-    margin: auto;
-    padding: 1em;
-    box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
-    border-radius: var(--border-radius);
-    background: transparent;
+    width: 400px;
+        max-width: 400px;
+        margin: auto;
+        padding: 2rem;
+        box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
+        border-radius: var(--border-radius);
+        background: #ffffff;
 }
