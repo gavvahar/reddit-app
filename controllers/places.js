@@ -5,6 +5,7 @@ router.get("/new", (req, res) => {
   res.render("places/new");
 });
 
+
 router.get("/", (req, res) => {
   // res.render("places/new");
   db.Post.find()
@@ -16,6 +17,14 @@ router.get("/", (req, res) => {
       res.render("error404");
     });
 });
+
+router.get("/createAccount", (req, res) => {
+     
+      res.render("places/createAccount")
+  
+   
+});
+
 
 // router.get("/", (req, res) => {
 //   db.Post.find({title: req.params.id})
@@ -96,6 +105,7 @@ router.get("/:id/edit", (req, res) => {
       res.render("error404");
     });
 });
+
 
 router.post("/:id/rant", (req, res) => {
   res.send("GET /places/:id/rant stub");

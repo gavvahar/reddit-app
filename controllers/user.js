@@ -17,8 +17,11 @@ exports.signup = async (req, res, next)=>{
         res.status(201).json({
             success: true,
             user
+            
         })
-        
+            .then(() => {
+      res.redirect("/places");
+    })
     } catch (error) {
         console.log(error);
         next(error);
