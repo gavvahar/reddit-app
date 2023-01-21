@@ -155,4 +155,15 @@ img {
 
 .form__link:hover {
   text-decoration: underline;
+}
+
+.form {
+  align-items: center;
+  width: 400px;
+  max-width: 400px;
+  right: 100px;
+  padding: 2rem;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
+  border-radius: var(--border-radius);
+  justify-content: center;
 }/*# sourceMappingURL=style.css.map */
