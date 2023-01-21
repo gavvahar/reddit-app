@@ -5,7 +5,7 @@ function home(){
     return(
         <Def>
             <main>
-                <h1>REST-Rant</h1>
+                <h1>Ansr</h1>
                 <div>
                     <img src="/images/brenda-godinez-MsTOg6rhRVk-unsplash.jpg" alt="Brenda Godinez" width="40%"/>
                     <div>

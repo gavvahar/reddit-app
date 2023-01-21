@@ -5,6 +5,12 @@ router.get("/new", (req, res) => {
   res.render("places/new");
 });
 
+router.get("/createAccount", (req, res) => {
+     
+      res.render("places/createAccount")
+  
+   
+});
 
 router.get("/", (req, res) => {
   // res.render("places/new");
